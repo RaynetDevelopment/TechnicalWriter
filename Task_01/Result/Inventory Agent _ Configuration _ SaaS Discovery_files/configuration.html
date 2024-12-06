@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)https://docs.raynet.de/rayventory/scan-engine/latest/user-guide/en/saas_discovery2.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Inventory Agent &gt; Configuration &gt; SaaS Discovery</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="generator" content="Help &amp; Manual">
+   <meta name="keywords" content="">
+   <meta name="description" content="By default the entire history from Chromium Edge and Google Chrome web browsers for the given number of days (by default 30 days) will be taken and the following tables will be...">
+   <link type="text/css" href="./default.css" rel="stylesheet">
+   <link rel="icon" href="https://docs.raynet.de/rayventory/scan-engine/latest/user-guide/en/favicon.ico" type="image/x-icon">
+   <link type="text/css" href="./custom.css" rel="stylesheet">   
+   <link rel="preconnect" href="https://fonts.googleapis.com/">
+   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+   <link href="./css2" rel="stylesheet">
+
+   <style type="text/css" media="screen"> 
+      html, body { 
+        margin:1em; 
+        padding:0; 
+        background: #ffffff;
+        font-size: .950em;
+        font-weight: normal;
+        line-height: 150%;
+        font-family: 'Myriad Pro', 'Helvetica', 'Segoe UI', sans-serif;
+      } 
+      
+      h1, h2{                                                                    
+        font-family: 'Myriad Pro Light', 'Open Sans', 'Helvetica', 'Segoe UI Light',  sans-serif;
+      }
+      
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+        padding-bottom: 10px;
+        background: white;
+      } 
+      
+
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      /*#idheader table { background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(238,238,238,1) 70%); min-height: 40px } */            
+      #idheader h1 { 
+      color: #000;  
+      font-size: 32pt; 
+      font-weight: 80 !important;
+     /* margin-top: 10px;
+      margin-left: -10px;
+      line-height: 1.5em      */
+      }               
+      
+      .crumbs {
+      color: #444;  
+      font-size: 0.9em; 
+      font-weight: 300;
+      margin-bottom: 25px;
+      margin-left: -10px;
+      margin-top: 10px;
+      }
+      
+      .crumbs a {
+              color: #999;
+      }
+      
+      .crumbs b {
+              color: #777;
+      }
+      
+      .crumbs a:hover {   
+              color: #333;
+      }
+      
+      .submit {
+      color: #000;  
+      font-size: 1em; 
+      font-weight: normal;
+      }
+      
+      #idnav {
+       /* text-align: right;  */
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_black.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_blue.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: black; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: black; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: black; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style type="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="./jquery.js.download"></script>
+   <script type="text/javascript" src="./helpman_settings.js.download"></script>
+   <script type="text/javascript" src="./helpman_topicinit.js.download"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "saas_discovery2.htm");
+   </script>
+   <script type="text/javascript" src="./highlight.js.download"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">SaaS Discovery</span></h1>
+</div>
+<div id="idheader" style="position: fixed;">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tbody><tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="https://docs.raynet.de/rayventory/scan-engine/latest/user-guide/en/index.html?saas_discovery2.htm" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+
+      
+                            <p class="crumbs">RayVentory Scan&nbsp;Engine &gt; 12.6 u4 &gt; <a href="https://docs.raynet.de/rayventory/scan-engine/latest/user-guide/en/index.html" target="_top">User Guide</a>&nbsp;&gt; <a href="https://docs.raynet.de/rayventory/scan-engine/latest/user-guide/en/inventory_agent.htm">Inventory Agent</a> &gt; <a href="https://docs.raynet.de/rayventory/scan-engine/latest/user-guide/en/configuration.htm">Configuration</a>&nbsp;</p>
+         
+            
+
+      
+   
+      <h1 class="p_Heading1"><span class="f_Heading1">SaaS Discovery</span></h1>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="https://docs.raynet.de/rayventory/scan-engine/latest/user-guide/en/configuration.htm" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="https://docs.raynet.de/rayventory/scan-engine/latest/user-guide/en/configuration.htm" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="https://docs.raynet.de/rayventory/scan-engine/latest/user-guide/en/usage.htm" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</tbody></table>
+</div>
+</div>  
+
+<div id="idcontent" style="margin-top: 174.453px;"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p class="p_Normal">By default the entire history from Chromium Edge and Google Chrome web browsers for the given number of days (by default 30 days) will be taken and the following tables will be populated with it:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,&#39;Lucida Sans Unicode&#39;,&#39;Lucida Grande&#39;,&#39;Lucida Sans&#39;;display:inline-block;width:13px;margin-left:-13px">•</span><span class="f_CodeExample">ComputerUsage</span> </p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,&#39;Lucida Sans Unicode&#39;,&#39;Lucida Grande&#39;,&#39;Lucida Sans&#39;;display:inline-block;width:13px;margin-left:-13px">•</span><span class="f_CodeExample">SoftwareFile</span> </p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,&#39;Lucida Sans Unicode&#39;,&#39;Lucida Grande&#39;,&#39;Lucida Sans&#39;;display:inline-block;width:13px;margin-left:-13px">•</span><span class="f_CodeExample">SoftwareFileName</span> </p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,&#39;Lucida Sans Unicode&#39;,&#39;Lucida Grande&#39;,&#39;Lucida Sans&#39;;display:inline-block;width:13px;margin-left:-13px">•</span><span class="f_CodeExample">SoftwareFileUsage</span> </p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,&#39;Lucida Sans Unicode&#39;,&#39;Lucida Grande&#39;,&#39;Lucida Sans&#39;;display:inline-block;width:13px;margin-left:-13px">•</span><span class="f_CodeExample">SoftwareUsagePerWeek</span> </p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,&#39;Lucida Sans Unicode&#39;,&#39;Lucida Grande&#39;,&#39;Lucida Sans&#39;;display:inline-block;width:13px;margin-left:-13px">•</span><span class="f_CodeExample">SoftwareVersion</span> </p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">It is possible to reduce the amount of data by using a whitelist. To use a whitelist, create a file named <span class="f_CodeExample">SaaSwhitelist.xml</span>. Then the schedule line to download the <span class="f_CodeExample">.xml</span> in the <span class="f_CodeExample">default.cfg</span> needs to be configured and enabled. If a whitelist has been defined, only those URLs listed in the whitelist will be taken into account when running the SaaS discovery.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-weight: bold;">Example:</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">schedule:command:curl.exe&nbsp;--output&nbsp;"C\:\ProgramData\Raynet\RayVentoryInventoryAgent\SaaSwhitelisted.xml"&nbsp;-f&nbsp;http\://rayventory\:591/rviaconfig/SaaSwhitelisted.xml:45&nbsp;0&nbsp;*&nbsp;*&nbsp;*</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">After RayVentory Scan&nbsp;Engine has been installed, an example file can be found at <span class="f_CodeExample">C:\Program Files (x86)\RayVentoryScanEngine\Contrib\SaaSwhitelistedexample.xml</span>.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">In order to add a URL to the whitelist, the following format needs to be used:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">&lt;Saas&nbsp;Url="{URL}"&nbsp;Regex="{BOOLEAN}"&nbsp;/&gt;</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,&#39;Lucida Sans Unicode&#39;,&#39;Lucida Grande&#39;,&#39;Lucida Sans&#39;;display:inline-block;width:13px;margin-left:-13px">•</span><span style="font-weight: bold;">Saas Url</span>: Should contain the URL (either as string or as regular expression) that should be added to the whitelist.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,&#39;Lucida Sans Unicode&#39;,&#39;Lucida Grande&#39;,&#39;Lucida Sans&#39;;display:inline-block;width:13px;margin-left:-13px">•</span><span style="font-weight: bold;">Regex</span>: Can be either <span class="f_CodeExample">true</span> or <span class="f_CodeExample">false</span>.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: &#39;Courier New&#39;;display:inline-block;width:13px;margin-left:-13px">o</span>If <span class="f_CodeExample">Regex</span> is set to <span class="f_CodeExample">false</span>, all URL containing the exact string will be taken into account.<br>
+<span style="font-weight: bold;">Example</span>: <br>
+<span class="f_CodeExample">&lt;Saas Url="microsoft.com" Regex="false" /&gt;</span><br>
+All URLs that contain the string <span class="f_CodeExample">microsoft.com</span> will be taken into account.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: &#39;Courier New&#39;;display:inline-block;width:13px;margin-left:-13px">o</span>If <span class="f_CodeExample">Regex</span> is set to <span class="f_CodeExample">true</span>, regular expressions will be used.<br>
+<span style="font-weight: bold;">Example</span>:<br>
+<span class="f_CodeExample">&lt;SaaS Url="raynet\.(de|com)" Regex="true" /&gt;</span><br>
+All URLs that contain either <span class="f_CodeExample">raynet.de</span> or <span class="f_CodeExample">raynet.com</span> will be taken into account.<br>
+More information about regular expressions can be found in the <span style="color: #0000ff; text-decoration: underline;"><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference" target="_blank" class="weblink">Microsoft Documentation</a></span>.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-weight: bold;">SaaSwhitelistedexample.xml File</span></p>
+<p class="p_Normal">&nbsp;</p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 1px 0 1px 0;"><table style="border:none; border-spacing:0;">
+<tbody><tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="margin: 0 0 0 0;"><span style="font-family: &#39;Courier New&#39;,Courier,monospace; color: #ff0000; background-color: #ffff00;">&lt;?</span><span style="font-family: &#39;Courier New&#39;,Courier,monospace; color: #0000ff;">xml</span><span style="font-family: &#39;Courier New&#39;,Courier,monospace;"> </span><span style="font-family: &#39;Courier New&#39;,Courier,monospace; color: #ff0000;">version</span><span style="font-family: &#39;Courier New&#39;,Courier,monospace;">=</span><span style="font-family: &#39;Courier New&#39;,Courier,monospace; font-weight: bold; color: #800080;">"1.0"</span><span style="font-family: &#39;Courier New&#39;,Courier,monospace; color: #ff0000; background-color: #ffff00;">?&gt;</span></p>
+<p style="margin: 0 0 0 0;"><span style="font-family: &#39;Courier New&#39;,Courier,monospace; color: #0000ff;">&lt;Whitelist&gt;</span></p>
+<p style="margin: 0 0 0 0;"><span style="width:48px;display:inline-block">&nbsp;</span><span style="font-family: &#39;Courier New&#39;,Courier,monospace; color: #0000ff;">&lt;Saas</span><span style="font-family: &#39;Courier New&#39;,Courier,monospace;"> </span><span style="font-family: &#39;Courier New&#39;,Courier,monospace; color: #ff0000;">Url</span><span style="font-family: &#39;Courier New&#39;,Courier,monospace;">=</span><span style="font-family: &#39;Courier New&#39;,Courier,monospace; font-weight: bold; color: #800080;">"microsoft.com"</span><span style="font-family: &#39;Courier New&#39;,Courier,monospace;"> </span><span style="font-family: &#39;Courier New&#39;,Courier,monospace; color: #ff0000;">Regex</span><span style="font-family: &#39;Courier New&#39;,Courier,monospace;">=</span><span style="font-family: &#39;Courier New&#39;,Courier,monospace; font-weight: bold; color: #800080;">"false"</span><span style="font-family: &#39;Courier New&#39;,Courier,monospace;"> </span><span style="font-family: &#39;Courier New&#39;,Courier,monospace; color: #0000ff;">/&gt;</span></p>
+<p style="margin: 0 0 0 0;"><span style="width:48px;display:inline-block">&nbsp;</span><span style="font-family: &#39;Courier New&#39;,Courier,monospace; color: #0000ff;">&lt;Saas</span><span style="font-family: &#39;Courier New&#39;,Courier,monospace;"> </span><span style="font-family: &#39;Courier New&#39;,Courier,monospace; color: #ff0000;">Url</span><span style="font-family: &#39;Courier New&#39;,Courier,monospace;">=</span><span style="font-family: &#39;Courier New&#39;,Courier,monospace; font-weight: bold; color: #800080;">".raynet."</span><span style="font-family: &#39;Courier New&#39;,Courier,monospace;"> </span><span style="font-family: &#39;Courier New&#39;,Courier,monospace; color: #ff0000;">Regex</span><span style="font-family: &#39;Courier New&#39;,Courier,monospace;">=</span><span style="font-family: &#39;Courier New&#39;,Courier,monospace; font-weight: bold; color: #800080;">"true"</span><span style="font-family: &#39;Courier New&#39;,Courier,monospace;"> </span><span style="font-family: &#39;Courier New&#39;,Courier,monospace; color: #0000ff;">/&gt;</span></p>
+<p style="margin: 0 0 0 0;"><span style="font-family: &#39;Courier New&#39;,Courier,monospace; color: #0000ff;">&lt;/Whitelist&gt;</span></p>
+</td>
+</tr>
+</tbody></table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+  
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+
+
+</body></html>

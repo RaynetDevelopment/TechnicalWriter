@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<!-- saved from url=(0084)https://docs.raynet.de/rayventory/scan-engine/latest/user-guide/en/installation2.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Inventory Agent &gt; Installation</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="generator" content="Help &amp; Manual">
+   <meta name="keywords" content="">
+   <meta name="description" content="On Windows To install the agent, utilize Windows Installer (msiexec) and the available configurations from the MSI package.  The following MSI properties are most commonly used:">
+   <link type="text/css" href="./default.css" rel="stylesheet">
+   <link rel="icon" href="https://docs.raynet.de/rayventory/scan-engine/latest/user-guide/en/favicon.ico" type="image/x-icon">
+   <link type="text/css" href="./custom.css" rel="stylesheet">   
+   <link rel="preconnect" href="https://fonts.googleapis.com/">
+   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+   <link href="./css2" rel="stylesheet">
+
+   <style type="text/css" media="screen"> 
+      html, body { 
+        margin:1em; 
+        padding:0; 
+        background: #ffffff;
+        font-size: .950em;
+        font-weight: normal;
+        line-height: 150%;
+        font-family: 'Myriad Pro', 'Helvetica', 'Segoe UI', sans-serif;
+      } 
+      
+      h1, h2{                                                                    
+        font-family: 'Myriad Pro Light', 'Open Sans', 'Helvetica', 'Segoe UI Light',  sans-serif;
+      }
+      
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+        padding-bottom: 10px;
+        background: white;
+      } 
+      
+
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      /*#idheader table { background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(238,238,238,1) 70%); min-height: 40px } */            
+      #idheader h1 { 
+      color: #000;  
+      font-size: 32pt; 
+      font-weight: 80 !important;
+     /* margin-top: 10px;
+      margin-left: -10px;
+      line-height: 1.5em      */
+      }               
+      
+      .crumbs {
+      color: #444;  
+      font-size: 0.9em; 
+      font-weight: 300;
+      margin-bottom: 25px;
+      margin-left: -10px;
+      margin-top: 10px;
+      }
+      
+      .crumbs a {
+              color: #999;
+      }
+      
+      .crumbs b {
+              color: #777;
+      }
+      
+      .crumbs a:hover {   
+              color: #333;
+      }
+      
+      .submit {
+      color: #000;  
+      font-size: 1em; 
+      font-weight: normal;
+      }
+      
+      #idnav {
+       /* text-align: right;  */
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_black.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_blue.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: black; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: black; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: black; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style type="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="./jquery.js.download"></script>
+   <script type="text/javascript" src="./helpman_settings.js.download"></script>
+   <script type="text/javascript" src="./helpman_topicinit.js.download"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "installation2.htm");
+   </script>
+   <script type="text/javascript" src="./highlight.js.download"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">Installation</span></h1>
+</div>
+<div id="idheader" style="position: fixed;">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tbody><tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="https://docs.raynet.de/rayventory/scan-engine/latest/user-guide/en/index.html?installation2.htm" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+
+      
+                            <p class="crumbs">RayVentory Scan&nbsp;Engine &gt; 12.6 u4 &gt; <a href="https://docs.raynet.de/rayventory/scan-engine/latest/user-guide/en/index.html" target="_top">User Guide</a>&nbsp;&gt; <a href="https://docs.raynet.de/rayventory/scan-engine/latest/user-guide/en/inventory_agent.htm">Inventory Agent</a>&nbsp;</p>
+         
+            
+
+      
+   
+      <h1 class="p_Heading1"><span class="f_Heading1">Installation</span></h1>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="https://docs.raynet.de/rayventory/scan-engine/latest/user-guide/en/inventory_agent.htm" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="https://docs.raynet.de/rayventory/scan-engine/latest/user-guide/en/inventory_agent.htm" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="https://docs.raynet.de/rayventory/scan-engine/latest/user-guide/en/installation_with_an_initial_c.htm" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</tbody></table>
+</div>
+</div>  
+
+<div id="idcontent" style="margin-top: 174.453px;"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<h3 class="p_Heading3"><span class="f_Heading3">On Windows</span></h3>
+<p class="p_Normal">To install the agent, utilize Windows Installer (<span class="f_CodeExample">msiexec</span>) and the available configurations from the MSI package.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">The following MSI properties are most commonly used:</p>
+<p class="p_Normal">&nbsp;</p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 1px 0 1px 0;"><table style="border:none; border-spacing:0; border-collapse:collapse;">
+<tbody><tr>
+<td style="vertical-align:middle; width:368px; height:36px; background-color:#E0E0E0; padding:5px; border:solid thin #999999;"><p class="p_Normal"><span style="font-weight: bold;">Property</span></p>
+</td>
+<td style="vertical-align:middle; width:1183px; height:36px; background-color:#E0E0E0; padding:5px; border:solid thin #999999;"><p class="p_Normal"><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:368px; padding:5px; border:solid thin #999999;"><p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">INSTALLDIR</span></p>
+</td>
+<td style="vertical-align:middle; width:1183px; padding:5px; border:solid thin #999999;"><p class="p_Normal">The installation folder<br>
+Default value: C:\Program Files (x86)\RayVentory\</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:368px; padding:5px; border:solid thin #999999;"><p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">CONFIGDOWNLOADSOURCE</span></p>
+</td>
+<td style="vertical-align:middle; width:1183px; padding:5px; border:solid thin #999999;"><p class="p_Normal">The URL from which the configuration will be downloaded.<br>
+<span style="font-weight: bold;">This is a required property if installed in a non-interactive mode.</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:368px; padding:5px; border:solid thin #999999;"><p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">RESULTUPLOADDESTINATION</span></p>
+</td>
+<td style="vertical-align:middle; width:1183px; padding:5px; border:solid thin #999999;"><p class="p_Normal">The URL for the upload location to which the NDI files will be uploaded.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:368px; padding:5px; border:solid thin #999999;"><p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">SCHEDULEGETCONFIG</span></p>
+</td>
+<td style="vertical-align:middle; width:1183px; padding:5px; border:solid thin #999999;"><p class="p_Normal">The default schedule for getting the configuration<br>
+Default value: <span class="f_CodeExample">25 0 * * *</span><br>
+Default value represents downloading a new configuration file every day at 00:25</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:368px; padding:5px; border:solid thin #999999;"><p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">SAASDISCODAYSBACK</span></p>
+</td>
+<td style="vertical-align:middle; width:1183px; padding:5px; border:solid thin #999999;"><p class="p_Normal">Configures the SaaS discovery <br>
+Default: 30 days of browser history</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:368px; padding:5px; border:solid thin #999999;"><p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">USAGEAGENTDISABLE</span></p>
+</td>
+<td style="vertical-align:middle; width:1183px; padding:5px; border:solid thin #999999;"><p class="p_Normal">Disabled usage agent (one of the following: <span class="f_CodeExample">true</span> or <span class="f_CodeExample">false</span>)<br>
+Default value: <span class="f_CodeExample">true</span></p>
+</td>
+</tr>
+</tbody></table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">For a detailed description for each available config command, please, refer to the corresponding chapters.</p>
+<h3 class="p_Heading3"><span class="f_Heading3">Example</span></h3>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">msiexec&nbsp;RVIA.msi&nbsp;INSTALLDIR=”C:\RayVentory&nbsp;Agent”&nbsp;SCHEDULEGETCONFIG=”25&nbsp;0&nbsp;*&nbsp;*&nbsp;*”&nbsp;CONFIGDOWNLOADSOURCE=http://192.168.123.123:951/rviaconfig/special.cfg&nbsp;RESULTUPLOADDESTINATION=http://192.168.123.123:951/Inventories/</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">This command installs the agent and configures it to download the configuration from the defined location every day at <span class="f_CodeExample">00:25</span>.</p>
+<p class="p_Table" style="border-color: #000000; border-style: solid; border-width: thin; border-top: none; border-right: none; border-left: none;"><span class="f_Table">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="width:100%; border:none; border-spacing:3px;">
+<tbody><tr>
+<td style="vertical-align:top; width:48px; height:48px; padding:0; border:none"><p class="p_Table"><img alt="finger1" width="48" height="48" style="margin:0;width:48px;height:48px;border:none" src="./finger1.png"></p>
+</td>
+<td style="vertical-align:top; width:1284px; height:43px; padding:0; border:none"><p class="p_Table"><span style="font-weight: bold;">Be aware:</span></p>
+<p class="p_Normal">Changes in the configuration file may be later overridden by incoming configuration files pulled from the download location.</p>
+</td>
+</tr>
+</tbody></table>
+</div>
+<p class="p_Table" style="border-color: #000000; border-style: solid; border-width: thin; border-right: none; border-bottom: none; border-left: none;"><span class="f_Table">&nbsp;</span></p>
+<p class="p_Table" style="border-color: #000000; border-style: solid; border-width: thin; border-top: none; border-right: none; border-left: none;"><span class="f_Table">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="width:100%; border:none; border-spacing:3px;">
+<tbody><tr>
+<td style="vertical-align:top; width:48px; height:48px; padding:0; border:none"><p class="p_Table"><img alt="finger1" width="48" height="48" style="margin:0;width:48px;height:48px;border:none" src="./finger1.png"></p>
+</td>
+<td style="vertical-align:top; width:1284px; height:43px; padding:0; border:none"><p class="p_Table"><span style="font-weight: bold;">Be aware:</span></p>
+<p class="p_Normal">Ensure that the value for resultUploadDestination ends on a slash (/) as RVIA simply concatenates this value with the destination filename to generate the URL for the individual file upload. This behavior is intentional as it allows to prefix each uploaded file.<br>
+<span style="font-weight: bold;">Example:</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">resultUploadDestination=http://myhost:591/</span></p>
+<p class="p_Normal"><span style="font-weight: bold;">Example with prefix:</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">resultUploadDestination=http://myhost:591/myprefix</span></p>
+<p class="p_Normal">This will produce files on the RVSE host that start with "myprefix".</p>
+</td>
+</tr>
+</tbody></table>
+</div>
+<p class="p_Table" style="border-color: #000000; border-style: solid; border-width: thin; border-right: none; border-bottom: none; border-left: none;"><span class="f_Table">&nbsp;</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">On Non-Windows</span></h3>
+<p class="p_Normal">The command used for the installation on Linux/Unix machines depends on the operating system. </p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_CodeExample" style="font-family: Arial,&#39;Lucida Sans Unicode&#39;,&#39;Lucida Grande&#39;,&#39;Lucida Sans&#39;;display:inline-block;width:13px;margin-left:-13px">•</span><span style="font-weight: bold;">AIX:</span> <span class="f_CodeExample">sudo installp -aYF -d &lt;package&gt; rvia.rte</span></p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_CodeExample" style="font-family: Arial,&#39;Lucida Sans Unicode&#39;,&#39;Lucida Grande&#39;,&#39;Lucida Sans&#39;;display:inline-block;width:13px;margin-left:-13px">•</span><span style="font-weight: bold;">DEB:</span> <span class="f_CodeExample">sudo dpkg -i &lt;package&gt;</span></p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_CodeExample" style="font-family: Arial,&#39;Lucida Sans Unicode&#39;,&#39;Lucida Grande&#39;,&#39;Lucida Sans&#39;;display:inline-block;width:13px;margin-left:-13px">•</span><span style="font-weight: bold;">MacOS:</span> <span class="f_CodeExample">sudo installer -pkg &lt;package&gt; -target /</span></p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_CodeExample" style="font-family: Arial,&#39;Lucida Sans Unicode&#39;,&#39;Lucida Grande&#39;,&#39;Lucida Sans&#39;;display:inline-block;width:13px;margin-left:-13px">•</span><span style="font-weight: bold;">RPM:</span> <span class="f_CodeExample">sudo rpm -ivh &lt;package&gt;</span></p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_CodeExample" style="font-family: Arial,&#39;Lucida Sans Unicode&#39;,&#39;Lucida Grande&#39;,&#39;Lucida Sans&#39;;display:inline-block;width:13px;margin-left:-13px">•</span><span style="font-weight: bold;">Solaris:</span> <span class="f_CodeExample">sudo pkgadd -d &lt;path/to/package&gt; RVIA</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">The configuration of the agent is a separate step after the installation (<span class="f_CodeExample">cd /opt/rvia; sudo ./rvia getconfig &lt;url&gt;</span>).</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+  
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+
+
+</body></html>

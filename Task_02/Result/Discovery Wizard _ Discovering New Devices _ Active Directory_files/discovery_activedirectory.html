@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<!-- saved from url=(0096)https://docs.raynet.de/rayventory/scan-engine/latest/user-guide/en/discovery_activedirectory.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Discovery Wizard &gt; Discovering New Devices &gt; Active Directory</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="generator" content="Help &amp; Manual">
+   <meta name="keywords" content="">
+   <meta name="description" content="This page is shown only if the user selected the Import from Active Directory option on the previous screen.">
+   <link type="text/css" href="./default.css" rel="stylesheet">
+   <link rel="icon" href="https://docs.raynet.de/rayventory/scan-engine/latest/user-guide/en/favicon.ico" type="image/x-icon">
+   <link type="text/css" href="./custom.css" rel="stylesheet">   
+   <link rel="preconnect" href="https://fonts.googleapis.com/">
+   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+   <link href="./css2" rel="stylesheet">
+
+   <style type="text/css" media="screen"> 
+      html, body { 
+        margin:1em; 
+        padding:0; 
+        background: #ffffff;
+        font-size: .950em;
+        font-weight: normal;
+        line-height: 150%;
+        font-family: 'Myriad Pro', 'Helvetica', 'Segoe UI', sans-serif;
+      } 
+      
+      h1, h2{                                                                    
+        font-family: 'Myriad Pro Light', 'Open Sans', 'Helvetica', 'Segoe UI Light',  sans-serif;
+      }
+      
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+        padding-bottom: 10px;
+        background: white;
+      } 
+      
+
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      /*#idheader table { background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(238,238,238,1) 70%); min-height: 40px } */            
+      #idheader h1 { 
+      color: #000;  
+      font-size: 32pt; 
+      font-weight: 80 !important;
+     /* margin-top: 10px;
+      margin-left: -10px;
+      line-height: 1.5em      */
+      }               
+      
+      .crumbs {
+      color: #444;  
+      font-size: 0.9em; 
+      font-weight: 300;
+      margin-bottom: 25px;
+      margin-left: -10px;
+      margin-top: 10px;
+      }
+      
+      .crumbs a {
+              color: #999;
+      }
+      
+      .crumbs b {
+              color: #777;
+      }
+      
+      .crumbs a:hover {   
+              color: #333;
+      }
+      
+      .submit {
+      color: #000;  
+      font-size: 1em; 
+      font-weight: normal;
+      }
+      
+      #idnav {
+       /* text-align: right;  */
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_black.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_blue.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: black; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: black; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: black; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style type="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="./jquery.js.download"></script>
+   <script type="text/javascript" src="./helpman_settings.js.download"></script>
+   <script type="text/javascript" src="./helpman_topicinit.js.download"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "discovery_activedirectory.htm");
+   </script>
+   <script type="text/javascript" src="./highlight.js.download"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">Active Directory</span></h1>
+</div>
+<div id="idheader" style="position: fixed;">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tbody><tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="https://docs.raynet.de/rayventory/scan-engine/latest/user-guide/en/index.html?discovery_activedirectory.htm" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+
+      
+                            <p class="crumbs">RayVentory Scan&nbsp;Engine &gt; 12.6 u4 &gt; <a href="https://docs.raynet.de/rayventory/scan-engine/latest/user-guide/en/index.html" target="_top">User Guide</a>&nbsp;&gt; <a href="https://docs.raynet.de/rayventory/scan-engine/latest/user-guide/en/discovery.htm">Discovery Wizard</a> &gt; <a href="https://docs.raynet.de/rayventory/scan-engine/latest/user-guide/en/discovery_discovernewdevices.htm">Discovering New Devices</a>&nbsp;</p>
+         
+            
+
+      
+   
+      <h1 class="p_Heading1"><span class="f_Heading1">Active Directory</span></h1>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="https://docs.raynet.de/rayventory/scan-engine/latest/user-guide/en/discovery_methods.htm" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="https://docs.raynet.de/rayventory/scan-engine/latest/user-guide/en/discovery_discovernewdevices.htm" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="https://docs.raynet.de/rayventory/scan-engine/latest/user-guide/en/discovery_networkscan.htm" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</tbody></table>
+</div>
+</div>  
+
+<div id="idcontent" style="margin-top: 174.453px;"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p class="p_Normal">This page is shown only if the user selected the <span style="font-weight: bold;">Import from Active Directory</span> option on the previous screen.</p>
+<p class="p_Normal">&nbsp;</p>
+<div class="p_Normal"><img alt="DiscoveryWizard_ActiveDirectory" style="width:90%;max-width:1350px;height:auto;border:none" src="./discoverywizard_activedirectory.png"></div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-weight: bold;">Distinguished Name(s)</span></p>
+<p class="p_Normal">The domain name (dotted domain) or a LDAP query sting into the Active Directory Domain field. It is possible to enter multiple domain names or LDAP queries by separating them using a semicolon. You can also press the <span style="font-weight: bold;">Browse...</span> button to open a simple LDAP browser, that enables you to visually select the required container.</p>
+<p class="p_Table" style="border-color: #000000; border-style: solid; border-width: thin; border-top: none; border-right: none; border-left: none;"><span class="f_Table">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="width:100%; border:none; border-spacing:3px;">
+<tbody><tr>
+<td style="vertical-align:top; width:48px; height:48px; padding:0; border:none"><p class="p_Table"><img alt="finger1" width="48" height="48" style="margin:0;width:48px;height:48px;border:none" src="./finger1.png"></p>
+</td>
+<td style="vertical-align:top; width:1284px; height:43px; padding:0; border:none"><p class="p_Table"><span style="font-weight: bold;">Be aware:</span></p>
+<p class="p_Normal">The LDAP browser supports multiselection. Hold thr <span style="font-weight: bold;">CTRL</span> button when selecting items to select more than one item at once.</p>
+</td>
+</tr>
+</tbody></table>
+</div>
+<p class="p_Table" style="border-color: #000000; border-style: solid; border-width: thin; border-right: none; border-bottom: none; border-left: none;"><span class="f_Table">&nbsp;</span></p>
+<p class="p_Normal"><span style="font-weight: bold;">Filter</span></p>
+<p class="p_Normal">This is an optional field, which can be used to perform extra filtering of devices. Regular expressions are supported. If the field is left empty, all entries from the Active Directory will be considered when performing the import, otherwise only the devices with matching full qualified host names will be imported.</p>
+<p class="p_Table" style="border-color: #000000; border-style: solid; border-width: thin; border-top: none; border-right: none; border-left: none;"><span class="f_Table">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="width:100%; border:none; border-spacing:3px;">
+<tbody><tr>
+<td style="vertical-align:top; width:48px; height:48px; padding:0; border:none"><p class="p_Table"><img alt="finger1" width="48" height="48" style="margin:0;width:48px;height:48px;border:none" src="./finger1.png"></p>
+</td>
+<td style="vertical-align:top; width:1284px; height:43px; padding:0; border:none"><p class="p_Table"><span style="font-weight: bold;">Be aware:</span></p>
+<p class="p_Normal">Regular expressions can be complex to write and validate. If an invalid regular expression is entered, nothing will be imported. Also, pay attention to the fact that some characters and sequenced may have special meaning, for example a dot "." means any character inside the Regular Expression. To escape special characters, prepend them with backslash (\). Information about how to use regular expression refer to the <span style="color: #0000ff; text-decoration: underline;"><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions" target="_blank" class="weblink">Microsoft Documentation</a></span>.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-weight: bold;">Example:</span></p>
+<p class="p_Normal">[a-z]+\.sitea\.mydomain</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,&#39;Lucida Sans Unicode&#39;,&#39;Lucida Grande&#39;,&#39;Lucida Sans&#39;;display:inline-block;width:13px;margin-left:-13px">•</span>[a-z]: all lowercase letters from "a" to "z".</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,&#39;Lucida Sans Unicode&#39;,&#39;Lucida Grande&#39;,&#39;Lucida Sans&#39;;display:inline-block;width:13px;margin-left:-13px">•</span>+: the preceding element can be matched one or more times.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,&#39;Lucida Sans Unicode&#39;,&#39;Lucida Grande&#39;,&#39;Lucida Sans&#39;;display:inline-block;width:13px;margin-left:-13px">•</span>\.: matches a "."</p>
+<p class="p_Normal">Therefore this regular expression can be used to filter for everything that starts with letters only and ends with ".sitea.mydomain".</p>
+</td>
+</tr>
+</tbody></table>
+</div>
+<p class="p_Table" style="border-color: #000000; border-style: solid; border-width: thin; border-right: none; border-bottom: none; border-left: none;"><span class="f_Table">&nbsp;</span></p>
+<p class="p_Normal">You can always test the filter string by pressing the <span style="font-weight: bold;">Preview...</span> button. It will scan the currently selected node(s) and report back with a list of devices that matched your filter. For example, for a filter <span class="f_CodeExample">^mws</span> the following is reported:</p>
+<p class="p_Normal">&nbsp;</p>
+<div class="p_Normal"><img alt="04" style="width:90%;max-width:927px;height:auto;border:none" src="./04.png"></div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">(as a side note: <span class="f_CodeExample">^mws</span> means any computer name that starts with the string <span class="f_CodeExample">mws</span>).</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">The regular expression engine is case insensitive and does not enforce string boundaries (you have to enforce them by <span class="f_CodeExample">^</span> and <span class="f_CodeExample">$</span> respectively).</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-weight: bold;">Detection</span></p>
+<p class="p_Normal">This setting determines how RayVentory Scan&nbsp;Engine figures out which Operating System is installed on the imported device. There are two different ways of solving this:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,&#39;Lucida Sans Unicode&#39;,&#39;Lucida Grande&#39;,&#39;Lucida Sans&#39;;display:inline-block;width:13px;margin-left:-13px">•</span>Select <span style="font-weight: bold;">By using Active Directory information</span> to use Active Directory member attributes and resolve Operating System from their values. This is recommended if you want to avoid physical scans of the network and it is much faster then the other method.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,&#39;Lucida Sans Unicode&#39;,&#39;Lucida Grande&#39;,&#39;Lucida Sans&#39;;display:inline-block;width:13px;margin-left:-13px">•</span>Select <span style="font-weight: bold;">By scanning ports</span> if your Active Directory does not contain the required information OR if you want the results to be reliable based on the actual status of open / closed ports. If this option is selected, RayVentory Scan&nbsp;Engine checks whether typical ports for SSH or RPC are opened and based on their status the right device family is assigned.</p>
+<p class="p_Table" style="border-color: #000000; border-style: solid; border-width: thin; border-top: none; border-right: none; border-left: none;"><span class="f_Table">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="width:100%; border:none; border-spacing:3px;">
+<tbody><tr>
+<td style="vertical-align:top; width:48px; height:48px; padding:0; border:none"><p class="p_Table"><img alt="papercliper" width="48" height="48" style="margin:0;width:48px;height:48px;border:none" src="./papercliper.png"></p>
+</td>
+<td style="vertical-align:top; width:1284px; height:43px; padding:0; border:none"><p class="p_Table"><span style="font-weight: bold;">Note:</span></p>
+<p class="p_Normal">Option <span style="font-weight: bold;">Scanning ports </span>tries to contact each device in the specified network range and checks for predefined ports to determine the device family (Windows or UNIX). Contact your network administrator before executing scans on wide range of addresses.</p>
+</td>
+</tr>
+</tbody></table>
+</div>
+<p class="p_Table" style="border-color: #000000; border-style: solid; border-width: thin; border-right: none; border-bottom: none; border-left: none;"><span class="f_Table">&nbsp;</span></p>
+<p class="p_Normal"><span style="font-weight: bold;">Operating system filter</span></p>
+<p class="p_Normal">These options define which types of operating systems should be detected. It is possible to select multiple types.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,&#39;Lucida Sans Unicode&#39;,&#39;Lucida Grande&#39;,&#39;Lucida Sans&#39;;display:inline-block;width:13px;margin-left:-13px">•</span><span style="font-weight: bold;">Client</span>: Select this option to detect all clients.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,&#39;Lucida Sans Unicode&#39;,&#39;Lucida Grande&#39;,&#39;Lucida Sans&#39;;display:inline-block;width:13px;margin-left:-13px">•</span><span style="font-weight: bold;">Server</span>: Select this option to detect all servers.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,&#39;Lucida Sans Unicode&#39;,&#39;Lucida Grande&#39;,&#39;Lucida Sans&#39;;display:inline-block;width:13px;margin-left:-13px">•</span><span style="font-weight: bold;">Custom</span>: When this option is selected, it is possible to define a custom type of system in the <span style="font-weight: bold;">Operating systems</span> field. </p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-weight: bold;">Fallback</span></p>
+<p class="p_Normal">These options define the behavior of RayVentory Scan&nbsp;Engine should an unrecognized or disabled device be found.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,&#39;Lucida Sans Unicode&#39;,&#39;Lucida Grande&#39;,&#39;Lucida Sans&#39;;display:inline-block;width:13px;margin-left:-13px">•</span><span style="font-weight: bold;">Include disabled devices</span> - Select this option to include disabled devices. If you leave it unchecked, the devices that are disabled in Active Directory will not be imported (recommended).</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,&#39;Lucida Sans Unicode&#39;,&#39;Lucida Grande&#39;,&#39;Lucida Sans&#39;;display:inline-block;width:13px;margin-left:-13px">•</span><span style="font-weight: bold;">If there is no proper information in Active Directory, treat the device as Windows-based machine</span> - Select this option to automatically fallback to Windows, if the information in Active Directory is not sufficient to determine the device family. If you uncheck this option, the devices will be imported as "unknown" types. This option is only available if the detection is set to <span style="font-weight: bold;">By using Active Directory information</span>.</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,&#39;Lucida Sans Unicode&#39;,&#39;Lucida Grande&#39;,&#39;Lucida Sans&#39;;display:inline-block;width:13px;margin-left:-13px">•</span><span style="font-weight: bold;">If device is unreachable, treat it as Windows-based machine</span> - Select this option for an automatically fallback to Windows if the set of open / closed ports was not enough to identify the device family. If you uncheck this option, the devices will be imported as "unknown" types. This option is only available if the detection is set to <span style="font-weight: bold;">By scanning ports</span>.</p>
+<p class="p_Table" style="border-color: #000000; border-style: solid; border-width: thin; border-top: none; border-right: none; border-left: none;"><span class="f_Table">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="width:100%; border:none; border-spacing:3px;">
+<tbody><tr>
+<td style="vertical-align:top; width:48px; height:48px; padding:0; border:none"><p class="p_Table"><img alt="papercliper" width="48" height="48" style="margin:0;width:48px;height:48px;border:none" src="./papercliper.png"></p>
+</td>
+<td style="vertical-align:top; width:1284px; height:43px; padding:0; border:none"><p class="p_Normal"><span style="font-weight: bold;">Note:</span></p>
+<p class="p_Normal">Make sure that the current user has read permissions for the Active Directory.</p>
+</td>
+</tr>
+</tbody></table>
+</div>
+<p class="p_Normal" style="border-color: #000000; border-style: solid; border-width: thin; border-right: none; border-bottom: none; border-left: none; margin: 0 0 0 0;">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+  
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+
+
+</body></html>
